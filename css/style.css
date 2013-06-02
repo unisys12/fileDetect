@@ -1,0 +1,27 @@
+html {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.main {
+margin: auto;
+padding: 1em;
+width: 90%;
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+font-weight: 300;
+}
+
+label {
+	display: block;
+}
+
+.feedback {
+	width: 35%;
+	margin-top: 2em;
+	padding-left: 1em;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: .25em;
+	background-color: slategray;
+	font-weight: 200;
+}
