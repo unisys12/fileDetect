@@ -1,4 +1,5 @@
 <?php
+
 class File {
 
 	public $output;
@@ -30,7 +31,12 @@ class File {
 	{
 
 		$file = File::getFile($file['type']);
-		return $file;
+
+		if($_FILES['file']['error']==0) {
+		  return $file;
+		} else {
+		  return $_FILES['file']['error'];
+		}
 
 	}
 
