@@ -9,5 +9,4 @@ Test project using PHP to accurately detect MIME file type info. Nothing special
 - CSS - Contains CSS files... of course!
 
 ### Project Purpose
-Create a class library that can be used to detect and validate files based on MIME info recieved from a file being uploaded. 
-
+Create a class library that can be used to detect and validate files based on MIME info recieved from a file being uploaded.
