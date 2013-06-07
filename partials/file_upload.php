@@ -14,9 +14,10 @@
 	{
 		$file = $_FILES['file'];
 
-		echo '<li>' . File::getFileName($file) . '</li>';
+		// echo '<li>' . File::getFileName($file) . '</li>';
 		echo '<li>' . File::getFileType($file) . '</li>';
-		echo '<li>' . File::getFileSize($file) . 'kb </li>';
+		// echo '<li>' . File::getFileSize($file) . 'kb </li>';
+		echo var_dump($_FILES);
 	}
 	else
 	{
