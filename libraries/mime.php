@@ -2,7 +2,6 @@
 
 class File {
 
-	public $output;
 	public $file;
 
 	public function __construct()
@@ -14,7 +13,6 @@ class File {
 	public static function getFile($file)
 	{
 
-		//$file = $_FILES['file'];
 		return $file;
 
 	}
@@ -22,24 +20,38 @@ class File {
 	public static function getFileName($file)
 	{
 
-		$file = File::getFile($file['name']);
 		return $file;
 
 	}
 
+	/**
+		* If the global browser says that the file is a image,
+		* use the 'getimagesize()' method to determine if it
+		* really is. If so, display the file type. If not, display
+		* an error.
+		*/
 	public static function getFileType($file)
 	{
+		// Check if the file is an image from the global array
+		if($file['type'] == 'image/jpg' || 'image/png' || 'image/gif'){
 
-		$file = File::getFile($file['type']);
+			//If so, check the file from the servers temp location.
+			$tmp = File::getFileTemp($file);
+			$file = getimagesize($tmp);
 
-		if($_FILES['file']['error']==0) {
-		  return $file;
-		} else {
-		  return $_FILES['file']['error'];
+			// display the filetype returned from getimagesize()
+			return $file['mime'];
+
+		}	else {
+
+			// Display error msg since the file was not an image.
+			// For some reason, upon failure, message is not returning
+			return "The file you selected is not a image!";
 		}
 
 	}
 
+	// Return the file's size
 	public static function getFileSize($file)
 	{
 
@@ -48,6 +60,7 @@ class File {
 
 	}
 
+	// Returns the file's tmp path from the server
 	public static function getFileTemp($file)
 	{
 
@@ -56,6 +69,7 @@ class File {
 
 	}
 
+	// Returns errors
 	public static function getFileError($file)
 	{
 
