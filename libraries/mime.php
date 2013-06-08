@@ -32,22 +32,14 @@ class File {
 		*/
 	public static function getFileType($file)
 	{
-		// Check if the file is an image from the global array
-		if($file['type'] == 'image/jpg' || 'image/png' || 'image/gif'){
 
-			//If so, check the file from the servers temp location.
-			$tmp = File::getFileTemp($file);
-			$file = getimagesize($tmp);
+		$finfo = new finfo(FILEINFO_MIME); // return mime type ala mimetype extension
+		$tmp = File::getFileTemp($file);
+		/* get mime-type for a specific file */
+		$filename = $tmp;
+		$file = $finfo->file($filename);
 
-			// display the filetype returned from getimagesize()
-			return $file['mime'];
-
-		}	else {
-
-			// Display error msg since the file was not an image.
-			// For some reason, upon failure, message is not returning
-			return "The file you selected is not a image!";
-		}
+		return $file;
 
 	}
 
