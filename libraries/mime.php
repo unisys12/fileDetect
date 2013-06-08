@@ -4,7 +4,7 @@ class File {
 
 	public $file;
 
-	public function __construct()
+	public function __construct($file)
 	{
 
 	}
@@ -20,26 +20,57 @@ class File {
 	public static function getFileName($file)
 	{
 
-		return $file;
+		// Get the files tmp location
+		$tmp = File::getFileTemp($file);
+
+		// Check if this is a valid file
+		if(is_file($tmp)){
+
+			// Assign the files name to the variable $file
+			$file = File::getFile($file)['name'];
+
+			// Return the info
+			return $file;
+
+		} else {
+
+			// If not a valid file, return an error message to the browser
+			return "There is a problem with your files name!";
+		}
+
 
 	}
 
 	/**
-		* If the global browser says that the file is a image,
+		* If the browser says that the file is a image,
 		* use the 'getimagesize()' method to determine if it
 		* really is. If so, display the file type. If not, display
 		* an error.
 		*/
 	public static function getFileType($file)
 	{
+		// return mime type ala mimetype extension
+		$finfo = new finfo(FILEINFO_MIME);
 
-		$finfo = new finfo(FILEINFO_MIME); // return mime type ala mimetype extension
+		// Get the files tmp location
 		$tmp = File::getFileTemp($file);
-		/* get mime-type for a specific file */
-		$filename = $tmp;
-		$file = $finfo->file($filename);
 
-		return $file;
+		// If this is a valid file
+		if(is_file($tmp)){
+
+			// get mime-type for a specific file using finfo()
+			$file = $finfo->file($tmp);
+
+			// Return the info
+			return $file;
+
+		} else {
+
+			// If not a valid file, return an error message to the browser
+			return "The file type of the file is incorrect!";
+
+		}
+
 
 	}
 
@@ -47,8 +78,24 @@ class File {
 	public static function getFileSize($file)
 	{
 
-		$file = File::getFile($file['size']);
-		return $file;
+		// Get the file temp location
+		$tmp = File::getFileTemp($file);
+
+		// Check if it is a valid file
+		if(is_file($tmp)){
+
+			// Use filesize() to get the size and assign it to $file
+			$file = filesize($tmp);
+
+			// Return the filesize and append kb to it
+			return $file . "kb";
+
+		} else {
+
+			// If not a valid file, return an error message to the browser
+			return "There file size of the file is incorrect!";
+
+		}
 
 	}
 
