@@ -74,7 +74,7 @@ class File {
 
 	}
 
-	// Return the file's size
+	// Return the file's size. if no size is returned, throws an error
 	public static function getFileSize($file)
 	{
 
