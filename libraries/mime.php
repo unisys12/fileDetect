@@ -56,7 +56,7 @@ class File {
 		$tmp = File::getFileTemp($file);
 
 		// If this is a valid file
-		if(is_file($tmp)){
+		if(is_uploaded_file($tmp)){
 
 			// get mime-type for a specific file using finfo()
 			$file = $finfo->file($tmp);
@@ -104,6 +104,8 @@ class File {
 	{
 
 		$file = File::getFile($file['tmp_name']);
+
+
 		return $file;
 
 	}
