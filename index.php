@@ -6,6 +6,7 @@
 <title>MIME Detect</title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="css/style.css">
+<script src="js/mime.js"></script>
 </head>
 <body>
 

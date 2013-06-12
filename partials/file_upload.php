@@ -1,29 +1,13 @@
-<?php require('libraries/mime.php'); ?>
-
 <form action="" method="post" enctype="multipart/form-data">
-	<label for="name">File To Check! </label>
-	<input type="file" name="file" id="name">
+	<label for="file">File To Check! </label>
+	<input type="file" name="file" id="file" onchange="findMime()">
 	<input type="submit" name="submit" value="Check File">
 </form>
 
 <div class="feedback">
 
-	<?php
-
-	if(isset($_POST['submit']))
-	{
-		$file = $_FILES['file'];
-
-		echo '<li>' . File::getFileName($file) . '</li>';
-		echo '<li>' . File::getFileType($file) . '</li>';
-		echo '<li>' . File::getFileSize($file) . '</li>';
-
-	}
-	else
-	{
-		echo "No file selected / General error";
-	}
-
-	?>
+<ul>
+	<li id="type"></li>
+</ul>
 
 </div>
