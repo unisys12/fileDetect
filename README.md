@@ -15,7 +15,9 @@ Project is laid out as follows :
 ``
 File::getFileType($file);
 ``
+
 You could simply assign it to a variable and then echo that out, such as -
+
 ``
 $type = File::getFileType($file);
 echo $type;
