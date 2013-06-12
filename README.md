@@ -16,6 +16,7 @@ Project is laid out as follows :
 ``
 <script src="js/mime.js"></script>
 ``
+
 2. Now just add a element with an ID of what you want to display
 ``
 <li id="type"></li>
