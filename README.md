@@ -10,14 +10,12 @@ Project is laid out as follows :
 - partials - contains html file partials
 - root - index.php file and readme. Develop branch README will be used for notes and general thoughts throughout the project life cycle. Master README will be used, eventually, for general how-to's and stuff like that.
 
-## Usage
+## Useage
 ====
 1. Add the script to your project
-
 ``
 <script src="js/mime.js"></script>
 ``
-
 2. Now just add a element with an ID of what you want to display
 ``
 <li id="type"></li>
