@@ -7,7 +7,9 @@
 <div class="feedback">
 
 <ul>
+	<li id="name"></li>
 	<li id="type"></li>
+	<li id="size"></li>
 </ul>
 
 </div>
