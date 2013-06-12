@@ -13,6 +13,7 @@ Project is laid out as follows :
 ## Usage
 ====
 1. Add the script to your project
+
 ``
 <script src="js/mime.js"></script>
 ``
