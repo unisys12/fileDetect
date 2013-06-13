@@ -13,11 +13,11 @@ Test project to accurately detect MIME file type info. Nothing special to see he
 - js - Contains JavaScript files. Takes the place of the libraries folder above. Naming habits die hard!
 - css - Contains CSS files... still!
 
-### Project Purpose
+## Project Purpose
 ====
 I have taken on the self imposed task of learning all that I can about file type detection in modern web development. This started out with helping out on another project and has led to a much longer journey into the depths of this topic. I have read a ton, got very frustrated and got back on board. Learning and understanding this process has truly become a sideline passion for me.
 
-### Repo Structure
+## Repo Structure
 ====
 The examples in each branch represent very basic examples of how to retrieve the MIME content info from a file using either a different language or technique, while trying to keep the initial project structure the same.
 
@@ -27,6 +27,6 @@ The examples in each branch represent very basic examples of how to retrieve the
 
 - MIMEbyFileAPI - Contains a very simple JavaScript example of retrieveing file size, type and name using the HTML4 File API.
 
-### A Little About Me
+## A Little About Me
 ====
 Now, bear in mind that I do not do this for a living. I simply love web development and do this as a hobby. Sure, I would love to do this for a living, but... not there yet!
