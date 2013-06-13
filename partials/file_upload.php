@@ -1,4 +1,4 @@
-<?php require('libraries/mime.php'); ?>
+<?php require( dirname(__FILE__) . '\..\libraries\mime.php' ) ?>
 
 <form action="" method="post" enctype="multipart/form-data">
 	<label for="name">File To Check! </label>
