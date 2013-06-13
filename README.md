@@ -26,4 +26,4 @@ The examples in each branch represent very basic examples of how to retrieve the
 - MIMEbyFileAPI - Contains a very simple JavaScript example of retrieveing file size, type and name using the HTML4 File API.
 
 ### A Little About Me
-Now, bear in mind that I do not do this for a living. I simple love web development and do this as a hobby. Sure, I would love to do this for a living, but... not there yet!
+Now, bear in mind that I do not do this for a living. I simply love web development and do this as a hobby. Sure, I would love to do this for a living, but... not there yet!
